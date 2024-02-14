@@ -45,9 +45,9 @@
     @endguest
 
     @auth
-        <div>
+        <div class="container d-flex align-items-center justify-content-center flex-column" style="height: 100vh">
             <p>Sudah login, silahkan akses halaman dashboard</p>
-            <a href="/dashboard">Dashboard</a>
+            <a href="{{ route('rumahsakit') }}">Dashboard</a>
         </div>
     @endauth
 </body>

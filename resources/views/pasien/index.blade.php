@@ -3,6 +3,7 @@
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-4">
         <select name="id_rumah_sakit" id="id_rumah_sakit" class="form-select mt-2 w-50">
+            <option value="">Filter berdasarkan nama rumah sakit</option>
             @foreach ($rumahsakit as $item)
                 <option value="{{ $item->id }}">{{ $item->nama }}</option>
             @endforeach

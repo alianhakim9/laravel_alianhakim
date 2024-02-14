@@ -15,17 +15,21 @@
 </head>
 
 <body>
-
-    <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="d-flex align-items-start sidebar">
         <div class="sidebar-link">
-            <a href="/dashboard/rumahsakit">CRUD Rumah Sakit</a>
-            <a href="/dashboard/pasien">CRUD Pasien</a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="/dashboard/rumahsakit" class="nav-link">CRUD Rumah Sakit</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/dashboard/pasien" class="nav-link">CRUD Pasien</a>
+                </li>
+            </ul>
         </div>
         @auth
-            <form method="POST" action="{{ route('logout') }}">
+            <form method="POST" action="{{ route('logout') }}" class="ps-4">
                 @csrf
-                <button type="submit">Logout</button>
+                <button type="submit" class="btn btn-sm btn-warning ps-4 pe-4">Logout</button>
             </form>
         @endauth
     </aside>
