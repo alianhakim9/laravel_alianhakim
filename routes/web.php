@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RumahSakitController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -31,8 +32,13 @@ Route::get('/dashboard', function () {
 });
 
 Route::prefix('dashboard')->group(function () {
-    Route::get('rumahsakit', function () {
-        return view('rumahsakit.index');
+    Route::prefix('rumahsakit')->group(function () {
+        Route::get('/', [RumahSakitController::class, 'index'])->name('rumahsakit');
+        Route::get('tambah', [RumahSakitController::class, 'add'])->name('rumahsakit.add');
+        Route::post('store', [RumahSakitController::class, 'store'])->name('rumahsakit.store');
+        Route::get('/{id}/ubah', [RumahSakitController::class, 'edit'])->name('rumahsakit.edit');
+        Route::put('update/{id}', [RumahSakitController::class, 'update'])->name('rumahsakit.update');
+        Route::delete('hapus/{id}', [RumahSakitController::class, 'destroy'])->name('rumahsakit.destroy');
     });
     Route::get('pasien', function () {
         return view('pasien.index');

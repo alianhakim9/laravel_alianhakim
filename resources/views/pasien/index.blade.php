@@ -4,7 +4,6 @@
     <div class="filter-container">
         <select id="rumahSakitFilter">
             <option value="">Semua Pasien</option>
-            <!-- Options will be added dynamically using Ajax -->
         </select>
     </div>
     <table>
@@ -12,6 +11,7 @@
             <tr>
                 <th>Nama</th>
                 <th>Alamat</th>
+                <th>Rumah Sakit</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -19,6 +19,7 @@
             <tr>
                 <td>Rumah Sakit A</td>
                 <td>Jalan A No. 1</td>
+                <td>Rumah Sakit 1</td>
                 <td>
                     <button>Edit</button>
                     <button>Delete</button>
