@@ -11,6 +11,6 @@ class Pasien extends Model
 
     public function rumahsakit()
     {
-        return $this->belongsTo(RumahSakit::class);
+        return $this->belongsTo(RumahSakit::class, 'id_rumah_sakit', 'id');
     }
 }
