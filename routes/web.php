@@ -29,3 +29,12 @@ Route::get('/login', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Route::prefix('dashboard')->group(function () {
+    Route::get('rumahsakit', function () {
+        return view('rumahsakit.index');
+    });
+    Route::get('pasien', function () {
+        return view('pasien.index');
+    });
+});
