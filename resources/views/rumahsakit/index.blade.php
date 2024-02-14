@@ -1,13 +1,10 @@
 @extends('dashboard')
 
 @section('content')
-    <div class="filter-container">
-        <select id="rumahSakitFilter">
-            <option value="">Semua Rumah Sakit</option>
-        </select>
-        <a href="{{ route('rumahsakit.add') }}">Tambah Rumah Sakit</a>
+    <div class="d-flex align-items-end justify-content-end mb-4">
+        <a href="{{ route('rumahsakit.add') }}" class="btn btn-sm btn-primary">Tambah Rumah Sakit</a>
     </div>
-    <table>
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th>Nama Rumah Sakit</th>
